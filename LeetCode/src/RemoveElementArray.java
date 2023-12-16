@@ -41,16 +41,27 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 
     int count = 0;
-    int[] myArray = new int[nums.length];
+    
     for(int i=0; i<nums.length; i++)
     {
         if (nums[i]!=val)
         {
-           myArray[count] = nums[i];
            count++;
            
         }
     }
+    int[] myArray = new int[count];
+    
+    int index=0;
+    for(int i=0; i<nums.length; i++)
+    {
+         if (nums[i]!=val)
+        {
+           myArray[index] = nums[i];
+           index++;
+        }
+    }
+    
      
         System.out.println(count);
         
